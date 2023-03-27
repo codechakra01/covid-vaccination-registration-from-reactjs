@@ -38,9 +38,9 @@ function App() {
   const inputValidation = () => {
     let checkVal = true
     let message = ""
-    if (name != "" && email != "" && mobileNo != "" && addharNo != "" && pinCode != "" && address != "" && multiSelectValidation(gender) &&
-      multiSelectValidation(maritalStatus) && multiSelectValidation(vaccenter) && multiSelectValidation(country) && multiSelectValidation(state) && dateOfBirth != ""
-      && appointmentDate != "") {
+    if (name !== "" && email !== "" && mobileNo !== "" && addharNo !== "" && pinCode !== "" && address !== "" && multiSelectValidation(gender) &&
+      multiSelectValidation(maritalStatus) && multiSelectValidation(vaccenter) && multiSelectValidation(country) && multiSelectValidation(state) && dateOfBirth !== ""
+      && appointmentDate !== "") {
       if (!emailValidation(email)) {
         message = "Enter valid Email Id"
         checkVal = false
@@ -56,13 +56,13 @@ function App() {
         checkVal = false
 
       }
-      if (mobileNo.length != 10) {
+      if (mobileNo.length !== 10) {
 
         message += "\n" + "Enter valid Mobile Number"
         checkVal = false
 
       }
-      if (addharNo.length != 12) {
+      if (addharNo.length !== 12) {
         message += "\n" + "Enter valid Aadhar Number"
         checkVal = false
 
@@ -95,7 +95,7 @@ function App() {
   }
 
   const multiSelectValidation = (val) => {
-    return val != "" || val != "--Select--"
+    return val !== "" || val !== "--Select--"
   }
 
   return (
